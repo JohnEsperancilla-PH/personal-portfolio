@@ -83,12 +83,12 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        John is a Bacolod-based contnt creator and digital marketer with expertise in upscaling a business from zero to hero.
-        He focuses on creating efficient, maintainable and delivering exceptional content for his clients.
+        John is a Bacolod-based content creator and digital marketer with expertise in upscaling a business from zero to hero.
+        I focus on creating efficient, maintainable and delivering exceptional content for my clients.
         
         <br /><br />
         
-        He is also a student of Computer Science at the University of St. La Salle. Focusing his studies on areas like
+        I am also a student of Computer Science at the University of St. La Salle. Focusing my studies on areas like
         data science and machine learning.
       </>
     ),
