@@ -38,39 +38,39 @@ const font = {
 };
 
 const style = {
-  theme: "dark", // theme is not necessary when using ThemeProvider (default)
-  neutral: "gray", // sand | gray | slate
-  brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  accent: "red", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  solid: "contrast", // color | contrast
-  solidStyle: "flat", // flat | plastic
-  border: "playful", // rounded | playful | conservative
-  surface: "translucent", // filled | translucent
-  transition: "all", // all | micro | macro
-  scaling: "100" // 90 | 95 | 100 | 105 | 110
+  theme: "dark",
+  neutral: "slate",
+  brand: "orange",
+  accent: "red",
+  solid: "contrast",
+  solidStyle: "plastic",
+  border: "rounded",
+  surface: "translucent",
+  transition: "all",
+  scaling: "100"
 };
 
 const effects = {
   mask: {
-    cursor: false,
+    cursor: true,
     x: 50,
     y: 0,
     radius: 100,
   },
   gradient: {
-    display: false,
-    opacity: 100,
+    display: true,
+    opacity: 90,
     x: 50,
     y: 60,
     width: 100,
     height: 50,
     tilt: 0,
-    colorStart: "accent-background-strong",
+    colorStart: "brand-background-strong",
     colorEnd: "page-background",
   },
   dots: {
     display: true,
-    opacity: 40,
+    opacity: 30,
     size: "2",
     color: "brand-background-strong",
   },
@@ -82,9 +82,9 @@ const effects = {
     height: "0.25rem",
   },
   lines: {
-    display: false,
-    opacity: 100,
-    color: "neutral-alpha-weak",
+    display: true,
+    opacity: 20,
+    color: "brand-alpha-weak",
     size: "16",
     thickness: 1,
     angle: 45,

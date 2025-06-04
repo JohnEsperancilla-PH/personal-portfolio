@@ -1,16 +1,16 @@
 import { Logo } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "John",
+  lastName: "Esperancilla",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Computer Science Student",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "johnleonardesperancilla@gmail.com",
+  location: "Asia/Manila",
+  languages: ["English", "Filipino"],
 };
 
 const newsletter = {
@@ -18,29 +18,21 @@ const newsletter = {
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      I write about software development, technology trends, and share insights from my engineering journey.
     </>
   ),
 };
 
 const social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/JohnEsperancilla-PH",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "X",
-    icon: "x",
-    link: "",
+    link: "https://www.linkedin.com/in/john-esperancilla/",
   },
   {
     name: "Email",
@@ -55,16 +47,17 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Creating Content Beyond Boundaries</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    title: <>Recent project: <strong className="ml-4">Portfolio Website</strong></>,
+    href: "/work/portfolio-website",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon={false} style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm John, a Computer Science student at the University of St. La Salle.
+      I am a content creator and owner of <a href="https://nolastudios.net" target="_blank" rel="noopener noreferrer" className="text-brand-background-strong hover:text-accent-background-strong transition-colors">NOLA Studios</a>, a content creation company that creates content for various platforms.
+      And I am studying areas like data science and machine learning.
     </>
   ),
 };
@@ -83,59 +76,45 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://cal.com/johnesperancilla",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        John is a Bacolod-based contnt creator and digital marketer with expertise in upscaling a business from zero to hero.
+        He focuses on creating efficient, maintainable and delivering exceptional content for his clients.
+        
+        <br /><br />
+        
+        He is also a student of Computer Science at the University of St. La Salle. Focusing his studies on areas like
+        data science and machine learning.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "NOLA Studios",
+        timeframe: "2024 - Present",
+        role: "Creative Director and Owner",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Created a local marketing agency that creates content for various platforms. Focusing on creating content for social media platforms like Instagram and TikTok.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "StalWrites",
+        timeframe: "2024 - 2025",
+        role: "SEO Content Writer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Created blogs and articles for clients around the world that focus on SEO and content marketing.
           </>,
         ],
         images: [],
@@ -143,54 +122,39 @@ const about = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "University of St. La Salle",
+        description: <>Bachelor of Science in Computer Science</>,
+        timeframe: "2022 - Present"
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Liceo de La Salle",
+        description: <>Senior High School Education</>,
+        timeframe: "2020 - 2022"
+      },
+      {
+        name: "Philippine Normal University Visayas",
+        description: <>Basic Education</>,
+        timeframe: "2010 - 2020"
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Certifications",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Semrush Digital Marketing Certification",
+        description: <><a href="https://static.semrush.com/academy/certificates/34e0be8019/john-leonard-esperancilla_27.pdf" target="_blank" rel="noopener noreferrer" className="text-brand-background-strong hover:text-accent-background-strong transition-colors">Digital Marketing Certification</a> - Proficient in Digital Marketing.</>,
+        images: [],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "HubSpot Academy Digital Marketing Certification",
+        description: <><a href="http://app-na2.hubspot.com/academy/achievements/wdl67g44/en/1/john-leonard-tayapad-esperancilla/digital-marketing" target="_blank" rel="noopener noreferrer" className="text-brand-background-strong hover:text-accent-background-strong transition-colors">Digital Marketing Certification</a> - Proficient in Digital Marketing.</>,
+        images: [],
       },
     ],
   },

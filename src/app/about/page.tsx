@@ -97,7 +97,16 @@ export default function About() {
             {person.languages.length > 0 && (
               <Flex wrap gap="8">
                 {person.languages.map((language, index) => (
-                  <Tag key={language} size="l">
+                  <Tag 
+                    key={language} 
+                    size="l"
+                    style={{
+                      background: "var(--brand-alpha-weak)",
+                      borderColor: "var(--brand-alpha-medium)",
+                      backdropFilter: "blur(var(--static-space-1))",
+                      color: "var(--brand-weak)"
+                    }}
+                  >
                     {language}
                   </Tag>
                 ))}
@@ -135,6 +144,11 @@ export default function About() {
                   data-border="rounded"
                   variant="secondary"
                   icon="chevronRight"
+                  style={{
+                    background: "var(--brand-alpha-weak)",
+                    borderColor: "var(--brand-alpha-medium)",
+                    backdropFilter: "blur(var(--static-space-1))"
+                  }}
                 />
               </Flex>
             )}
@@ -162,6 +176,11 @@ export default function About() {
                                 label={item.name}
                                 size="s"
                                 variant="secondary"
+                                style={{
+                                  background: "var(--brand-alpha-weak)",
+                                  borderColor: "var(--brand-alpha-medium)",
+                                  backdropFilter: "blur(var(--static-space-1))"
+                                }}
                             />
                             <IconButton
                                 className="s-flex-show"
@@ -170,6 +189,11 @@ export default function About() {
                                 href={item.link}
                                 icon={item.icon}
                                 variant="secondary"
+                                style={{
+                                  background: "var(--brand-alpha-weak)",
+                                  borderColor: "var(--brand-alpha-medium)",
+                                  backdropFilter: "blur(var(--static-space-1))"
+                                }}
                             />
                         </React.Fragment>
                     ),
@@ -254,9 +278,14 @@ export default function About() {
               <Column fillWidth gap="l" marginBottom="40">
                 {about.studies.institutions.map((institution, index) => (
                   <Column key={`${institution.name}-${index}`} fillWidth gap="4">
-                    <Text id={institution.name} variant="heading-strong-l">
-                      {institution.name}
-                    </Text>
+                    <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
+                      <Text id={institution.name} variant="heading-strong-l">
+                        {institution.name}
+                      </Text>
+                      <Text variant="heading-default-xs" onBackground="neutral-weak">
+                        {institution.timeframe}
+                      </Text>
+                    </Flex>
                     <Text variant="heading-default-xs" onBackground="neutral-weak">
                       {institution.description}
                     </Text>
