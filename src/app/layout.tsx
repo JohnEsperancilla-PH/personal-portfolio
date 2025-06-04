@@ -9,15 +9,36 @@ import { baseURL, effects, style, font, home } from "@/app/resources";
 import { Background, Column, Flex, ThemeProvider, ToastProvider } from "@/once-ui/components";
 import { opacity, SpacingToken } from "@/once-ui/types";
 import { Meta } from "@/once-ui/modules";
+import { Metadata } from "next";
 
-export async function generateMetadata() {
-  return Meta.generate({
-    title: home.title,
-    description: home.description,
-    baseURL: baseURL,
-    path: home.path,
-    image: home.image,
-  });
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    ...Meta.generate({
+      title: home.title,
+      description: home.description,
+      baseURL: baseURL,
+      path: home.path,
+      image: home.image,
+    }),
+    icons: {
+      icon: [
+        { url: '/favicon.ico' },
+        { url: '/images/android-chrome-192x192.png', type: 'image/png', sizes: '192x192' },
+        { url: '/images/android-chrome-512x512.png', type: 'image/png', sizes: '512x512' }
+      ],
+      apple: [
+        { url: '/images/android-chrome-192x192.png', sizes: '192x192' },
+      ],
+      other: [
+        {
+          rel: 'mask-icon',
+          url: '/images/safari-pinned-tab.svg',
+          color: '#000000'
+        }
+      ]
+    },
+    manifest: '/site.webmanifest',
+  };
 }
 
 interface RootLayoutProps {

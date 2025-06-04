@@ -83,7 +83,7 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        John is a Bacolod-based content creator and digital marketer with expertise in upscaling a business from zero to hero.
+        I am a Bacolod-based content creator and digital marketer with expertise in upscaling a business from zero to hero.
         I focus on creating efficient, maintainable and delivering exceptional content for my clients.
         
         <br /><br />
